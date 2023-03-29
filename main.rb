@@ -1,12 +1,16 @@
-input = []
-alumnos = []
+input = ""
+alumnos = {}
 until input == "exit"
     puts "| create | load | show | update | exit |"
-    input = gets.chomp
+    print "> "
+    input = gets.chomp 
 
     case input
         when "create"
-            puts "created"
+            puts "Introducir nombre: "
+            name = gets.chomp
+            alumnos[name] = {}
+            pp alumnos
         when "load"
             puts "loade"
         when "show"
@@ -20,3 +24,4 @@ until input == "exit"
 
     end
 end
+
